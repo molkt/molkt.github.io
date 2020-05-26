@@ -16,7 +16,7 @@
 <meta property="og:description" content="空间复杂度优化，时间复杂度优化，数据结构与算法重点知识构建。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-22T00:19:34.000Z">
-<meta property="article:modified_time" content="2020-05-23T09:12:47.968Z">
+<meta property="article:modified_time" content="2020-05-26T10:04:54.794Z">
 <meta property="article:author" content="安之">
 <meta property="article:tag" content="algorithms">
 <meta name="twitter:card" content="summary">
@@ -184,10 +184,34 @@
         <p>空间复杂度优化，时间复杂度优化，数据结构与算法重点知识构建。</p>
 <a id="more"></a>
 
-<h2 id="1-将昂贵的时间复杂度转换成廉价的空间复杂度"><a href="#1-将昂贵的时间复杂度转换成廉价的空间复杂度" class="headerlink" title="1.  将昂贵的时间复杂度转换成廉价的空间复杂度"></a>1.  <strong>将<font color='red'>昂贵的时间</font>复杂度转换成<font color='red'>廉价的空间</font>复杂度</strong></h2><pre><code>连接时间与空间的桥梁就是 &lt;font color=&apos;red&apos;&gt;数据结构&lt;/font&gt;，在开发过程中，如果能够找到一种高效的数据组织方式，采用合理的数据结构，就能降低时间复杂度，这通常会增加数据的存储量，也就是增加空间复杂度。</code></pre><h3 id="程序优化的最核心思路"><a href="#程序优化的最核心思路" class="headerlink" title="程序优化的最核心思路"></a>程序优化的最核心思路</h3><ul>
+<h2 id="1-将昂贵的时间复杂度转换成廉价的空间复杂度"><a href="#1-将昂贵的时间复杂度转换成廉价的空间复杂度" class="headerlink" title="1.  将昂贵的时间复杂度转换成廉价的空间复杂度"></a>1.  <strong>将<font size=5 color='red'>昂贵的时间</font>复杂度转换成<font size=5 color='red'>廉价的空间</font>复杂度</strong></h2><pre><code>连接时间与空间的桥梁就是 &lt;font color=&apos;red&apos;&gt;数据结构&lt;/font&gt;，在开发过程中，如果能够找到一种高效的数据组织方式，采用合理的数据结构，就能降低时间复杂度，这通常会增加数据的存储量，也就是增加空间复杂度。</code></pre><h3 id="程序优化的最核心思路"><a href="#程序优化的最核心思路" class="headerlink" title="程序优化的最核心思路"></a>程序优化的最核心思路</h3><ul>
 <li>第一步，暴力解法<br>  在没有任何时间、空间约束下，完成代码的开发</li>
 <li>第二步，无效操作处理<br>  将代码中的无效计算、无效存储剔除，降低时间或空间复杂度</li>
 <li>第三步，时空转换<br>  设计合理的数据结构，完成时间复杂度向空间复杂度的转移</li>
+</ul>
+<h2 id="2-数据结构基础：增加、删除、查找"><a href="#2-数据结构基础：增加、删除、查找" class="headerlink" title="2. 数据结构基础：增加、删除、查找"></a>2. <strong>数据结构基础：<font size = 5 color='red'>增加、删除、查找</font></strong></h2><pre><code>经过对代码拆解发现，即使很复杂的代码，它对数据的处理也只有3个基本操作：增、删、查。只要围绕这3个数据处理的操作进行分析，就能得出解决问题的最优方案：
+1. 在复杂代码中删除数据有两种可能：
+    第一，是在复杂数据结构的最后，删除一条数据。
+    第二，是在复杂数据结构的中间，删除一条数据。
+2. 在复杂代码中增加数据有两种可能：
+    第一，是在复杂数据结构的最后，增加一条数据。
+    第二，是在复杂数据结构的中间，增加一条数据。
+3. 在复杂代码中查找数据有两种可能：
+    第一，找到一条数据在复杂数据结构中出现的位置。
+    第二，找到一条数据在复杂数据结构中出现的次数。</code></pre><ul>
+<li><p>找到合理的数据结构</p>
+<ul>
+<li>首先分析代码到底对数据先后进行了哪些操作</li>
+<li>然后根据分析出来的数据操作，找到合理的数据结构</li>
+</ul>
+</li>
+<li><p>设计合理的数据结构</p>
+<ul>
+<li>首先，这段代码对数据进行了哪些操作？</li>
+<li>其次，这些操作中，那个操作最影响效率，时间复杂度的损耗最大？</li>
+<li>最后，哪种数据结构最能帮助你提高数据操作的使用效率？</li>
+</ul>
+</li>
 </ul>
 
       
@@ -454,6 +478,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Mendeley</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -462,15 +490,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Mendeley</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">tools</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -478,7 +498,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">tools</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>
