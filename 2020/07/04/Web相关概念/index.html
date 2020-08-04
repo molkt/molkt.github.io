@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#202020"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+  
+  
+    <meta name="keywords" content="Web 开发," />
+  
+
+  
+    <meta name="description" content="慢就是快。" />
+  
+  
+  <link rel="icon" type="image/x-icon" href="/img/turtle.jpg">
+  <title>Web相关概念 [ 跬步·on Coding ]</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css">
+    
+      <link rel="stylesheet" href="/css/xoxo.css">
+    
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+  <div class="nav-container">
+    <nav class="home-menu pure-menu pure-menu-horizontal">
+  <a class="pure-menu-heading" href="/">
+    <img class="avatar" src="/img/turtle.jpg">
+    <span class="title">跬步·on Coding</span>
+  </a>
+
+  <ul class="pure-menu-list clearfix">
+      
+          
+            <li class="pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
+          
+      
+          
+            <li class="pure-menu-item"><a href="/archives" class="pure-menu-link">Archives</a></li>
+          
+      
+          
+            <li class="pure-menu-item"><a href="/tags" class="pure-menu-link">Tags</a></li>
+          
+      
+          
+            <li class="pure-menu-item"><a href="[object Object]" class="pure-menu-link">Search</a></li>
+          
+      
+          
+            <li class="pure-menu-item"><a href="/resume" class="pure-menu-link">About</a></li>
+          
+      
+          
+            <li class="pure-menu-item"><a href="/atom.xml" class="pure-menu-link">RSS</a></li>
+          
+      
+  </ul>
+   
+</nav>
+  </div>
+
+  <div class="container" id="content-outer">
+    <div class="inner" id="content-inner">
+      <div class="post-container">
+  <article class="post" id="post">
+    <header class="post-header text-center">
+      <h1 class="title">
+        Web相关概念
+      </h1>
+      <span>
+        
+        <time class="time" datetime="2020-07-04T06:45:49.000Z">
+        2020-07-04
+      </time>
+        
+      </span>
+      <span class="slash">/</span>
+      <span class="post-meta">
+      <span class="post-tags">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web-%E5%BC%80%E5%8F%91/" rel="tag">Web 开发</a></li></ul>
+      </span>
+    </span>
+      <span class="slash">/</span>
+      <span class="read">
+      <span id="busuanzi_value_page_pv"></span> 点击
+    </span>
+      <span class="slash">/</span>
+      <span class="read">阅读耗时 7 分钟</span>
+    </header>
+
+    <div class="post-content">
+      <h2 id="Web相关概念回顾"><a href="#Web相关概念回顾" class="headerlink" title="Web相关概念回顾"></a>Web相关概念回顾</h2><h3 id="1-软件架构"><a href="#1-软件架构" class="headerlink" title="1. 软件架构"></a>1. 软件架构</h3><pre><code>1.C/S：客户端/服务器端
+2.B/S：浏览器/服务器端</code></pre><h3 id="2-资源分类"><a href="#2-资源分类" class="headerlink" title="2. 资源分类"></a>2. 资源分类</h3><pre><code>1.静态资源：所用访问后，得到的结果都一样，可以直接被浏览器解析
+    * html,css,JavaScript
+2.动态资源：每个用户访问后，得到的结果可能不一样。动态资源被访问后，需要先转换为静态资源，再返回给浏览器
+    * servlet/jsp,php,asp...</code></pre><h3 id="3-网络通信三要素"><a href="#3-网络通信三要素" class="headerlink" title="3. 网络通信三要素"></a>3. 网络通信三要素</h3><pre><code>1.IP：计算机在网络中的唯一标识
+2.端口：应用程序在计算机中的唯一标识，0~65536.
+3.通信协议：规定了数据通信的规则
+    * TCP：安全的协议，三次握手，四次挥手。速度稍慢
+    * UDP：不安全，速度快</code></pre><h2 id="web-服务器软件"><a href="#web-服务器软件" class="headerlink" title="web 服务器软件"></a>web 服务器软件</h2><pre><code>* 服务器：安装了服务器软件的计算机
+* 服务器软件：接收用户的请求，处理请求，做出响应
+* web服务器软件：接受用户请求，处理请求，做出相应
+    * 在web服务器软件中，可以部署web项目，用户可以通过浏览器访问这些项目
+    * web容器
+* 常见的Java 相关的web服务器软件：
+    * weblogic：oracle公司，大型的JavaEE服务器，支持所有的JavaEE规范，收费的
+    * webSphere：IBM公司，大型的JavaEE服务器，支持所有的JavaEE规范，收费的
+    * JBOSS：JBOSS公司，大型的JavaEE服务器，支持所有的JavaEE规范，收费的
+    * Tomcat：Apache基金会的，开源免费，中小型的JavaEE服务器，仅支持少量的JavaEE规范（servlet/jsp）   
+* JavaEE：Java语言在企业级应用的技术规范的总和，一共规范了13项大的规范</code></pre><h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><h3 id="1-Tomcat-目录文件"><a href="#1-Tomcat-目录文件" class="headerlink" title="1.Tomcat 目录文件"></a>1.Tomcat 目录文件</h3><p><img src="/img/tomcat/Tomcatdir.jpg" alt="Tomcat Directory"></p>
+<h3 id="2-Tomcat-下载，安装，卸载，启动，关闭，配置"><a href="#2-Tomcat-下载，安装，卸载，启动，关闭，配置" class="headerlink" title="2.Tomcat:下载，安装，卸载，启动，关闭，配置"></a>2.Tomcat:下载，安装，卸载，启动，关闭，配置</h3><p><img src="/img/tomcat/Tomcat.jpg" alt="Tomcat Use"><br>    * 修改自身端口号。HTTP默认端口号是80.如果Tomcat使用80端口，则访问的时候端口号可省略 </p>
+<h2 id="HTTP协议：Hyper-Text-Transfer-Protocol"><a href="#HTTP协议：Hyper-Text-Transfer-Protocol" class="headerlink" title="HTTP协议：Hyper Text Transfer Protocol"></a>HTTP协议：Hyper Text Transfer Protocol</h2><pre><code>* 概念：定义了，客户端与服务器通信时的发送数据的格式。
+* 特点：
+    1.基于TCP/IP协议
+    2.默认端口号：80
+    3.基于请求/响应模型
+    4.无状态协议：每次请求之间相互独立
+* 1.请求消息：客户端发送给服务端的数据
+    * 数据格式：
+        1.请求行
+        2.请求头
+        3.请求空行
+        4.请求体
+* 2.响应消息：服务端发送给客户端的数据
+    * 数据格式：
+        1.响应行：
+            格式：协议/版本 响应的状态码 状态码描述
+        2.响应头：
+            格式：头名称：值
+            常见的响应头：
+                1.content-type：服务端告诉客户端本次响应的数据格式以及编码格式
+                2.content-disposition：服务器告诉客户端以什么格式打开响应数据，
+                    *值：
+                        * in-line：默认值，在当前页面打开
+                        * attachment，filename-xxx：以附件的形式打开响应体，文件下载
+        3.响应空行
+        4.响应体：传输的数据</code></pre><h2 id="会话技术"><a href="#会话技术" class="headerlink" title="会话技术:"></a>会话技术:</h2><pre><code>* 一次会话，包含多次响应与请求。从客户端第一次给服务端发送数据开始，到有一方断开为止。
+* 建立会话的目的主要为了在一次会话范围内的多次请求间，共享数据。
+* 建立会话的方式：
+    1. 客户端会话技术：Cookie
+    2. 服务端会话技术：Session</code></pre><h3 id="1-Cookie-将数据保存在客户端的会话技术"><a href="#1-Cookie-将数据保存在客户端的会话技术" class="headerlink" title="1.Cookie:将数据保存在客户端的会话技术"></a>1.Cookie:将数据保存在客户端的会话技术</h3><h3 id="2-Session：将数据保存在服务端的会话技术"><a href="#2-Session：将数据保存在服务端的会话技术" class="headerlink" title="2.Session：将数据保存在服务端的会话技术"></a>2.Session：将数据保存在服务端的会话技术</h3><h2 id="软件三层架构：界面（web-表示层）、业务逻辑（service）、数据访问层（dao）"><a href="#软件三层架构：界面（web-表示层）、业务逻辑（service）、数据访问层（dao）" class="headerlink" title="软件三层架构：界面（web/表示层）、业务逻辑（service）、数据访问层（dao）"></a>软件三层架构：界面（web/表示层）、业务逻辑（service）、数据访问层（dao）</h2><p><img src="/img/tomcat/3layers.png" alt="软件三层架构"></p>
+<h2 id="Filter：过滤器"><a href="#Filter：过滤器" class="headerlink" title="Filter：过滤器"></a>Filter：过滤器</h2><pre><code>* 作用：拦截请求，完成某些操作</code></pre><h2 id="Listener：监听器"><a href="#Listener：监听器" class="headerlink" title="Listener：监听器"></a>Listener：监听器</h2><pre><code>* 事件监听机制
+    * 事件
+    * 事件源：事件发生的位置
+    * 监听器：一个对象
+    * 注册监听：将事件、事件源、监听器绑定到一起。当事件源上发生某事件时，执行监听器。</code></pre><h2 id="AJAX："><a href="#AJAX：" class="headerlink" title="AJAX："></a>AJAX：</h2><pre><code>* 概念：异步JavaScript与XML（asynchronous JavaScript and XML）
+* 异步与同步：</code></pre><p><img src="/img/tomcat/AJAX.png" alt="AJAX"></p>
+
+    </div>
+
+    <div>全文完。</div>
+  </article>
+  <div class="toc-container">
+    
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Posts</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Web相关概念回顾"><span class="toc-text">Web相关概念回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-软件架构"><span class="toc-text">1. 软件架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-资源分类"><span class="toc-text">2. 资源分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-网络通信三要素"><span class="toc-text">3. 网络通信三要素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web-服务器软件"><span class="toc-text">web 服务器软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tomcat"><span class="toc-text">Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Tomcat-目录文件"><span class="toc-text">1.Tomcat 目录文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Tomcat-下载，安装，卸载，启动，关闭，配置"><span class="toc-text">2.Tomcat:下载，安装，卸载，启动，关闭，配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP协议：Hyper-Text-Transfer-Protocol"><span class="toc-text">HTTP协议：Hyper Text Transfer Protocol</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#会话技术"><span class="toc-text">会话技术:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Cookie-将数据保存在客户端的会话技术"><span class="toc-text">1.Cookie:将数据保存在客户端的会话技术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Session：将数据保存在服务端的会话技术"><span class="toc-text">2.Session：将数据保存在服务端的会话技术</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#软件三层架构：界面（web-表示层）、业务逻辑（service）、数据访问层（dao）"><span class="toc-text">软件三层架构：界面（web&#x2F;表示层）、业务逻辑（service）、数据访问层（dao）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Filter：过滤器"><span class="toc-text">Filter：过滤器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Listener：监听器"><span class="toc-text">Listener：监听器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AJAX："><span class="toc-text">AJAX：</span></a></li></ol>
+  </div>
+
+
+  </div>
+</div>
+<!-- <div class="copyright">
+    <span>本作品采用</span>
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">知识共享署名 4.0 国际许可协议</a>
+    <span>进行许可。 转载时请注明原文链接。</span>
+</div> -->
+<!-- <div class="share" style="width: 100%;">
+  <img src="https://kevinofneu-blog-static.oss-cn-beijing.aliyuncs.com/static/2018-12-10-qrcode_for_gh_ffacf5722095_258.jpg" alt="Running Geek" style="margin: auto; display: block;"/>
+
+  <div style="margin: auto; text-align: center; font-size: 0.8em; color: grey;">老铁们关注走一走，不迷路</div>
+  
+</div> -->
+
+  
+    <div class="post-nav">
+      <div class="post-nav-item post-nav-next">
+        
+          <span>〈 </span>
+          <a href="/2020/05/23/Mendeley%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" rel="next" title="Mendeley 问题与解决方案">
+          Mendeley 问题与解决方案
+          </a>
+        
+      </div>
+  
+      <div class="post-nav-item post-nav-prev">
+          
+          <a href="/2020/07/05/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%95%B4%E7%90%86/" rel="prev" title="数据库相关整理">
+            数据库相关整理
+          </a>
+          <span>〉</span>
+        
+      </div>
+    </div>
+  
+
+
+    </div>
+
+    
+
+  </div>
+  <!-- <footer class="footer text-center">
+    <div id="bottom-inner">
+        <a class="bottom-item" href="">首页</a> |
+        <a class="bottom-item" href="" target="_blank">主站</a> |
+        <a class="bottom-item" href="" target="_blank">GitHub</a> |
+        <a class="bottom-item" href="https://hexo.io" target="_blank">Powered by hexo</a> |
+        <a class="bottom-item" href="https://github.com/KevinOfNeu/hexo-theme-xoxo" target="_blank">Theme xoxo</a>
+    </div>
+</footer> -->
+  
+
+<script>
+  (function(window, document, undefined) {
+
+    var timer = null;
+
+    function returnTop() {
+      cancelAnimationFrame(timer);
+      timer = requestAnimationFrame(function fn() {
+        var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+        if (oTop > 0) {
+          document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
+          timer = requestAnimationFrame(fn);
+        } else {
+          cancelAnimationFrame(timer);
+        }
+      });
+    }
+
+    var hearts = [];
+    window.requestAnimationFrame = (function() {
+      return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(callback) {
+          setTimeout(callback, 1000 / 60);
+        }
+    })();
+    init();
+
+    function init() {
+      css(".heart{z-index:9999;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+      attachEvent();
+      gameloop();
+      addMenuEvent();
+    }
+
+    function gameloop() {
+      for (var i = 0; i < hearts.length; i++) {
+        if (hearts[i].alpha <= 0) {
+          document.body.removeChild(hearts[i].el);
+          hearts.splice(i, 1);
+          continue;
+        }
+        hearts[i].y--;
+        hearts[i].scale += 0.004;
+        hearts[i].alpha -= 0.013;
+        hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);background:" + hearts[i].color;
+      }
+      requestAnimationFrame(gameloop);
+    }
+
+    /**
+     * 给logo设置点击事件
+     * 
+     * - 回到顶部
+     * - 出现爱心
+     */
+    function attachEvent() {
+      var old = typeof window.onclick === "function" && window.onclick;
+      var logo = document.getElementById("logo");
+      if (logo) {
+        logo.onclick = function(event) {
+          returnTop();
+          old && old();
+          createHeart(event);
+        }
+      }
+      
+    }
+
+    function createHeart(event) {
+      var d = document.createElement("div");
+      d.className = "heart";
+      hearts.push({
+        el: d,
+        x: event.clientX - 5,
+        y: event.clientY - 5,
+        scale: 1,
+        alpha: 1,
+        color: randomColor()
+      });
+      document.body.appendChild(d);
+    }
+
+    function css(css) {
+      var style = document.createElement("style");
+      style.type = "text/css";
+      try {
+        style.appendChild(document.createTextNode(css));
+      } catch (ex) {
+        style.styleSheet.cssText = css;
+      }
+      document.getElementsByTagName('head')[0].appendChild(style);
+    }
+
+    function randomColor() {
+      // return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
+      return "#F44336";
+    }
+
+    function addMenuEvent() {
+      var menu = document.getElementById('menu-main-post');
+      if (menu) {
+        var toc = document.getElementById('toc');
+        if (toc) {
+          menu.onclick = function() {
+            if (toc) {
+              if (toc.style.display == 'block') {
+                toc.style.display = 'none';
+              } else {
+                toc.style.display = 'block';
+              }
+            }
+          };
+        } else {
+          menu.style.display = 'none';
+        }
+      }
+    }
+
+  })(window, document);
+</script>
+
+  
+
+
+
+</body>
+</html>
