@@ -11,7 +11,7 @@
   <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
   
   
-    <meta name="keywords" content="mendeley," />
+    <meta name="keywords" content="力扣," />
   
 
   
@@ -19,7 +19,7 @@
   
   
   <link rel="icon" type="image/x-icon" href="/img/turtle.jpg">
-  <title>Mendeley 问题与解决方案 [ 跬步·on Coding ]</title>
+  <title>LeetCode刷题小结（一） [ 跬步·on Coding ]</title>
   
     <!-- stylesheets list from config.yml -->
     
@@ -68,19 +68,19 @@
   <article class="post" id="post">
     <header class="post-header text-center">
       <h1 class="title">
-        Mendeley 问题与解决方案
+        LeetCode刷题小结（一）
       </h1>
       <span>
         
-        <time class="time" datetime="2020-05-23T03:01:43.000Z">
-        2020-05-23
+        <time class="time" datetime="2020-04-13T14:32:20.000Z">
+        2020-04-13
       </time>
         
       </span>
       <span class="slash">/</span>
       <span class="post-meta">
       <span class="post-tags">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mendeley/" rel="tag">mendeley</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%9B%E6%89%A3/" rel="tag">力扣</a></li></ul>
       </span>
     </span>
       <span class="slash">/</span>
@@ -88,14 +88,22 @@
       <span id="busuanzi_value_page_pv"></span> 点击
     </span>
       <span class="slash">/</span>
-      <span class="read">阅读耗时 1 分钟</span>
+      <span class="read">阅读耗时 2 分钟</span>
     </header>
 
     <div class="post-content">
-      <p>Mendeley 使用过程中遇到的一些问题与解决方案</p>
+      <p>N的阶乘(N!)中的末尾有多少个0?</p>
 <a id="more"></a>
 
-<h3 id="1-Word-导入引用文献-in-appearence-order"><a href="#1-Word-导入引用文献-in-appearence-order" class="headerlink" title="1. Word 导入引用文献 in appearence order"></a>1. Word 导入引用文献 in appearence order</h3><pre><code>Mendeley导入的参考文献索引序号是根据Citation Style来编码的，所以不同的Citation Style导入参考文献编号的方式也是不同的，比如ACM Citation Style ([23,1,4,3,...,16,8]) 就是乱序的，而IEEE是按照插入参考文献的顺序进心编号的，也就是从[1][2][3]......[20].</code></pre>
+<h2 id="问题描述：N的阶乘-N-中的末尾有多少个0"><a href="#问题描述：N的阶乘-N-中的末尾有多少个0" class="headerlink" title="问题描述：N的阶乘(N!)中的末尾有多少个0?"></a>问题描述：N的阶乘(N!)中的末尾有多少个0?</h2><pre><code>例如:N = 5,N! = 120.末尾有1个0.</code></pre><h2 id="思路分析："><a href="#思路分析：" class="headerlink" title="思路分析："></a>思路分析：</h2><pre><code>一般思路，求出N！，根据求出的结果，计算末尾0的个数，但是N！可能很大，结果会溢出。那么该怎么考虑这个问题呢？</code></pre><ul>
+<li><p>N!是N个数相乘得到N！可以分解为N！= K * 10<sup>M</sup> ，结果中有几个10，末尾就有几个0，所以只要知道结果中有几个10就可以了，而哪些数相乘==10呢？答案是2，5.因为被2整除的概率比被5整除的概率高。N的阶乘可以分解为：2<sup>x</sup> ,…,5<sup>z</sup>, 所以只要知道N！分解式中5的指数Z就可以了,M==Z.</p>
+</li>
+<li><p>解题方法：求出N！的所有因式（1，2，3，…，N）分解中5的指数，然后求和。</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">count_zeros</span><span class="params">(n: int)</span> -&gt; int:</span></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line">    j = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>, n+<span class="number">1</span>, <span class="number">5</span>):</span><br><span class="line">        j = i</span><br><span class="line">        <span class="keyword">while</span> j%<span class="number">5</span>==<span class="number">0</span>:</span><br><span class="line">            num += <span class="number">1</span></span><br><span class="line">            j //= <span class="number">5</span></span><br><span class="line">    <span class="keyword">return</span> num</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     <div>全文完。</div>
@@ -104,7 +112,7 @@
     
   <div id="toc" class="toc-article">
     <strong class="toc-title">Posts</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Word-导入引用文献-in-appearence-order"><span class="toc-text">1. Word 导入引用文献 in appearence order</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述：N的阶乘-N-中的末尾有多少个0"><span class="toc-text">问题描述：N的阶乘(N!)中的末尾有多少个0?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路分析："><span class="toc-text">思路分析：</span></a></li></ol>
   </div>
 
 
@@ -117,16 +125,16 @@
       <div class="post-nav-item post-nav-next">
         
           <span>〈 </span>
-          <a href="/2020/05/22/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="数据结构与算法学习笔记">
-          数据结构与算法学习笔记
+          <a href="/2020/04/13/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/" rel="next" title="Git常用命令整理">
+          Git常用命令整理
           </a>
         
       </div>
   
       <div class="post-nav-item post-nav-prev">
           
-          <a href="/2020/07/04/Web%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/" rel="prev" title="Web相关概念">
-            Web相关概念
+          <a href="/2020/05/06/Intelli-J-Idea-%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/" rel="prev" title="开发环境配置: 提高开发效率">
+            开发环境配置: 提高开发效率
           </a>
           <span>〉</span>
         
